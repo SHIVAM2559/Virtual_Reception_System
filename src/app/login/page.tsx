@@ -11,9 +11,9 @@ import {
 import React, { useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { log } from "console";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import { WarpBackground } from "@/components/magicui/warp-background";
 
 
 export default function login(){
@@ -62,7 +62,7 @@ export default function login(){
 
 
     return (
-       <div className="min-h-screen flex items-center justify-center p-4">
+       <div className="min-h-screen flex items-center justify-center p-4 text-2xl">
       
          <Card className="w-full max-w-md">
         <CardHeader>

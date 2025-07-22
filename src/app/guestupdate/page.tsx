@@ -73,7 +73,9 @@ export default function guestupdate() {
    
 
   return (
-    <div>
+   
+    <div className="text-2xl">
+      
       <CardTitle className="flex justify-center py-7 text-3xl">
        {loading==true ? "Updating...":" Update Guest Information"}
       </CardTitle>
@@ -186,6 +188,7 @@ export default function guestupdate() {
       <div className="flex justify-center pt-0.5">
         <Button onClick={onSubmit} variant="outline">{buttonDisabled==true ? "No-Submit":"Submit"}</Button>
       </div>
+      
     </div>
   );
 }

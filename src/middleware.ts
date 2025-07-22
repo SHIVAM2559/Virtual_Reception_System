@@ -11,6 +11,7 @@ export function middleware(request: NextRequest) {
 
     //if token is valid and path is public then redirect it to guest update page
 
+  
     if(token && isPublic){
        return  NextResponse.redirect(new URL('/guestupdate', request.url));
     }
@@ -21,6 +22,7 @@ export const config = {
   matcher: [
    '/login',
    '/signup',
-   '/guestupdate'
+   '/guestupdate',
+   '/addmore'
   ]
 }

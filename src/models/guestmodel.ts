@@ -22,7 +22,7 @@ const guestSchema=new mongoose.Schema({
     gender:String,
     company:String,
     division:String,
-    visiting_officer:String
+    visiting_officer:[String]
 
 })
 

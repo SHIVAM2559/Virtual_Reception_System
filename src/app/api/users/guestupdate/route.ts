@@ -12,6 +12,7 @@ export async function POST(request: NextRequest){
         const purpose= reqbody.purpose;
         const valid_from= reqbody.valid;
         const valid_to= reqbody.valid_to;
+        const visiting_office=reqbody.officer
         
         const newGuest = new Guest({
           name: reqbody.Name,
@@ -25,7 +26,7 @@ export async function POST(request: NextRequest){
           gender: reqbody.gender,
           company: reqbody.institute,
           division: reqbody.division,
-          visiting_officer: reqbody.officer,
+          visiting_officer: [reqbody.officer],
         });
 
         //if guest already updated with same purpose
@@ -35,10 +36,11 @@ export async function POST(request: NextRequest){
         if(guest){
             const index=guest.purpose.indexOf(purpose);
             if(index!=-1){
-                //now i if purposse exist that means now my user is updating the guest entry or exit date
+                //now i if purposse exist that means now my user is updating the guest entry or exit date or the guest visisting officer
                 guest.purpose[index]=purpose;
                 guest.valid_from[index]=valid_from;
                 guest.valid_to[index]=valid_to;
+                guest.visiting_officer[index]=visiting_office;
                 await guest.save();
 
                 return NextResponse.json({
@@ -50,6 +52,7 @@ export async function POST(request: NextRequest){
                 guest.purpose.push(purpose);
                 guest.valid_from.push(valid_from);
                 guest.valid_to.push(valid_to);
+                guest.visiting_officer.push(visiting_office);
                 await guest.save();
                 return NextResponse.json({
                     success:true,
