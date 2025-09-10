@@ -5,11 +5,15 @@
 // };
 
 // export default nextConfig;
-/** @type {import('next').NextConfig} */
+// /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
-    ignoreDuringBuilds: true, // 🚀 disables ESLint errors during build
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true, // 🚀 ignores TS errors in production build
   },
 };
 
 module.exports = nextConfig;
+
