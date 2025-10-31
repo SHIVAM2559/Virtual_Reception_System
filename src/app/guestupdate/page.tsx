@@ -14,6 +14,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import axios from "axios";
 import { useRouter } from "next/navigation";
+import Link from "next/link"
 
 
 export default function guestupdate() {
@@ -188,6 +189,12 @@ export default function guestupdate() {
       <div className="flex justify-center pt-0.5">
         <Button onClick={onSubmit} variant="outline">{buttonDisabled==true ? "No-Submit":"Submit"}</Button>
       </div>
+        <Link
+      href="/navigate"
+      className=" mt-0 text-blue-400 flex items-center justify-center transition-transform "
+    >
+       Back to Home
+    </Link>
       
     </div>
   );
