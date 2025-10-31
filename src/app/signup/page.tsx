@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import { useRouter } from "next/navigation"
 import React, { useEffect } from "react"
 import axios from "axios"
+import Link from "next/link"
 
 
 
@@ -93,6 +94,12 @@ export default function signup(){
             {(buttonDisabled ? "No-Submit":"Submit")}
           </Button>
         </CardFooter>
+            <Link
+      href="/navigate"
+      className=" mt-0 text-blue-400 flex items-center justify-center transition-transform "
+    >
+       Back to Home
+    </Link>
       </Card>
      </div>
     );
