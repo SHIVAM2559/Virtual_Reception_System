@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { WarpBackground } from "@/components/magicui/warp-background";
+import Link from "next/link";
 
 
 export default function login(){
@@ -92,6 +93,12 @@ export default function login(){
             {(buttonDisabled ? "No-Login":"Login")}
           </Button>
         </CardFooter>
+            <Link
+      href="/navigate"
+      className=" mt-0 text-blue-400 flex items-center justify-center transition-transform "
+    >
+       Back to Home
+    </Link>
       </Card>
      </div>
     );
