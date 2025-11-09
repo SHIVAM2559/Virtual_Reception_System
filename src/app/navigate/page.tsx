@@ -49,7 +49,7 @@ export default function HomePage() {
         </Link>
 
         <Link
-          href="/logout"
+         href="/addmore"
           className="bg-gradient-to-r from-gray-500 to-slate-500 hover:from-slate-600 hover:to-gray-600 transition-all rounded-xl p-6 text-center font-semibold text-lg shadow-lg hover:scale-105"
         >
           Logout
