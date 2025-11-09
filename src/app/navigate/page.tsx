@@ -45,15 +45,20 @@ export default function HomePage() {
           href="/addmore"
           className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-yellow-600 hover:to-orange-600 transition-all rounded-xl p-6 text-center font-semibold text-lg shadow-lg hover:scale-105"
         >
-          Add More Page
+          Add More Guest
         </Link>
 
         <Link
           href="/api/users"
           className="bg-gradient-to-r from-gray-500 to-slate-500 hover:from-slate-600 hover:to-gray-600 transition-all rounded-xl p-6 text-center font-semibold text-lg shadow-lg hover:scale-105"
         >
-          API / Users
+          Logout
         </Link>
+
+        <Link
+          href="/api/users"
+          className="bg-gradient-to-r from-gray-500 to-slate-500 hover:from-slate-600 hover:to-gray-600 transition-all rounded-xl p-6 text-center font-semibold text-lg shadow-lg hover:scale-105"
+        >
       </div>
 
       {/* Footer */}
